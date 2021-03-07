@@ -1,0 +1,9 @@
+<?php
+session_start();
+session_destroy();
+if(isset($_SESSION['user'])){
+	header('location:dashboard.php');exit();
+}else{
+	header('location:index.php');exit();
+}
+?>
